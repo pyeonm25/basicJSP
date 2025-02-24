@@ -13,7 +13,7 @@ int grade = 3;
 <div align="center">
 		<h2>학번, 이름, 학년, 선택과목을 입력하는 폼</h2>
 		    
-	    <form method="post" action="ex09form05pro.jsp">
+	    <form method="post" action="./ex09form05pro.jsp">
 	    	<table border="1">
 	    	<tr>
 	    		<td>학번</td>

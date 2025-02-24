@@ -54,14 +54,14 @@ String hiddenVal = request.getParameter("hiddenValue");
 
 <script>
 alert('비어있는 값이 있습니다');
-// location.href= 'ex08form05.jsp';
+// location.href= './ex08form05.jsp';
 // history.go(-1);
 //history.back();
 </script>
 
 <%
 // 자바에서 페이지 이동하는 방법
-// response.sendRedirect("ex08form05.jsp");
+// response.sendRedirect("./ex08form05.jsp");
 
  } %>
 	

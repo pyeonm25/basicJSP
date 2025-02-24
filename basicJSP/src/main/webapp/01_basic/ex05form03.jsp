@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form action="ex06form03pro.jsp" method="get">
+<form action="./ex06form03pro.jsp" method="get">
 	<table border='1'>
 	<tr>
 		<td>첫번째 수 : </td>
