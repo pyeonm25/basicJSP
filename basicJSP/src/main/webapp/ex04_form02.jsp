@@ -21,5 +21,6 @@ if(age < 0){
 %>
 <h1>이름 : <%= name %></h1>
 <h1>나이 : <%= age %></h1>
+<h1> <%= request.getParameter("radio") %></h1>
 </body>
 </html>
