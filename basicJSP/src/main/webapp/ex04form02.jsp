@@ -10,8 +10,15 @@
 <%
 // form 에서 받아오는 값으로 변수 채우기 
 
-String name = request.getParameter("myName");
-int age = Integer.parseInt(request.getParameter("myAge"));
+String name = null;
+int age = 0;
+
+if(request.getParameter("myAge").equals("") || request.getParameter("myName").length()==0){
+	out.println("<p>값이 비어있습니다!! </p>");
+}else{
+	name=request.getParameter("myName");
+	age =Integer.parseInt(request.getParameter("myAge"));
+}
 
 if(age < 0){
 	age =0;
