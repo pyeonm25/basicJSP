@@ -9,26 +9,10 @@
 <body>
 <div align="center">
 
-<%
-
-String name = request.getParameter("name");
-String id = request.getParameter("id");
-String pw = request.getParameter("pw");
-String[] member = (String[])request.getAttribute("member");
-%>
-<h5> <%=name %></h5>
-<h5> <%=id %></h5>
-<h5> <%=pw %></h5>
-<h5> <%=member %></h5>
-
-
 <h1> 로그인</h1>
 <form action="./loginPro.jsp" method="post">
 ID : <input type="text" name="inputId" required /> <br>
 PW : <input type="text" name="inputPw" required /> <br>
-<input type="hidden" name="id" value="<%=id %>"/>
-<input type="hidden" name="pw" value="<%=pw %>"/>
-<input type="hidden" name="name" value="<%=name %>"/>
 <button> 로그인</button>
  </form> <br>
  <button onclick="location.href='./index.jsp'"> 홈으로</button>
