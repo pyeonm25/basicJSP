@@ -17,15 +17,16 @@
   }
   header,footer{
   	height: 10%;
+  	text-align: center;
   }
    main{
-   	height: 70%;
+   	height: 50%;
    	background-color: #eee; 
    }
 </style> 
 </head>
 <body>
-<header align="center">
+<header>
 <div class="gnb">
 
 <a href="./main.jsp">홈</a>
