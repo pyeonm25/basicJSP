@@ -49,7 +49,7 @@ public class MemberDAO {
 			data+= String.format("<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td>",
 					m.getId(), m.getPw(), m.getName(), m.isGender()?"남성":"여성");
 			
-			data+="<td><button> 삭제 </button></td> </tr>";
+			data+="<td><button onClick='location.href=\""+"adminDeletePro.jsp?idx="+i+"\"' > 삭제 </button></td> </tr>";
 			
 		}
 		
