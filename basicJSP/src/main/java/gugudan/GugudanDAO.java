@@ -3,6 +3,7 @@ package gugudan;
 import java.util.ArrayList;
 import java.util.Random;
 
+
 // 데이터를 조작하는애 (CURD)
 public class GugudanDAO {
 	private int score;
@@ -14,7 +15,7 @@ public class GugudanDAO {
 		quiz = new ArrayList();
 		makeQuiz();
 	}
-	
+
 	// 게임 생성 
 	private void makeQuiz() {
 		Random rd = new Random();

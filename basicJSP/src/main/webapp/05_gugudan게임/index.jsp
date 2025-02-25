@@ -8,6 +8,11 @@
     session.setAttribute("dao", dao);
    }else{
 	   dao = (GugudanDAO)session.getAttribute("dao");
+	   if(dao.getCnt() == 5){
+		   session.invalidate();
+			response.sendRedirect("./index.jsp");
+			return;
+	   }
    }
 
    %>

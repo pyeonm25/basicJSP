@@ -8,6 +8,7 @@
 		return;
    }else{
 	   dao = (GugudanDAO)session.getAttribute("dao");
+	 
    }
 
    %>
