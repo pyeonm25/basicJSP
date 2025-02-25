@@ -7,6 +7,7 @@ MemberDAO dao = null;
 if(session.getAttribute("dao")==null){
 	System.out.println("common.jsp");
 	response.sendRedirect("./index.jsp");
+	return;
 }else{
 	dao = (MemberDAO)session.getAttribute("dao");
 }
