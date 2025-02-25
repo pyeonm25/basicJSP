@@ -20,8 +20,12 @@
   	text-align: center;
   }
    main{
-   	height: 50%;
-   	background-color: #eee; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+   	height: 70%;
+ 
    }
 </style> 
 </head>
@@ -30,7 +34,14 @@
 <div class="gnb">
 
 <a href="./main.jsp">홈</a>
+
+<% if(dao.getLog() == -1){ %>
 <a href="./joinForm.jsp">회원가입</a>
+<a href="./loginForm.jsp">회원가입</a>
+<%}else{ %>
+<a href="./updateForm.jsp">회원정보수정</a>
+<%} %>
+<a href="./memberList.jsp">전체 회원목록</a>
 
 </div>
 

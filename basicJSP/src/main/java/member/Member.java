@@ -16,6 +16,18 @@ public class Member {
 	public String toString() {
 		return "Member [id=" + id + ", pw=" + pw + ", name=" + name + ", gender=" + gender + "]";
 	}
+	public String getId() {
+		return id;
+	}
+	public String getPw() {
+		return pw;
+	}
+	public String getName() {
+		return name;
+	}
+	public boolean isGender() {
+		return gender;
+	}
 	
 
 }
