@@ -2,8 +2,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
    <%
-      GugudanDAO dao = new GugudanDAO();
-   dao.initGame();
+   GugudanDAO dao = null;
+   if(session.getAttribute("dao")==null){
+    dao = new GugudanDAO();
+    session.setAttribute("dao", dao);
+   }else{
+	   dao = (GugudanDAO)session.getAttribute("dao");
+   }
+
    %>
 <!DOCTYPE html>
 <html>

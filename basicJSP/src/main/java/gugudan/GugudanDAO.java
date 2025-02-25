@@ -1,17 +1,54 @@
 package gugudan;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 // 데이터를 조작하는애 (CURD)
 public class GugudanDAO {
 	private int score;
 	private int cnt;
 	
-	ArrayList<GugudanVO> quiz;
+	private ArrayList<GugudanVO> quiz;
+	
+	public GugudanDAO() {
+		quiz = new ArrayList();
+		makeQuiz();
+	}
 	
 	// 게임 생성 
-	public void initGame() {
+	private void makeQuiz() {
+		Random rd = new Random();
+		
+		for(int i =0; i < 5;i+=1) {
+			GugudanVO vo = new GugudanVO(rd.nextInt(8)+2, rd.nextInt(9)+1);
+			quiz.add(vo);
+		}
+		System.out.println(quiz);
 		
 	}
-	// 정답인지 아닌지 판단애 
+	
+	public boolean isCorrectAnswer(String answer) {
+		int num = Integer.parseInt(answer);
+	    
+		
+		if(num == quiz.get(cnt++).getAnswer()) {
+			score+=20;
+			return true;
+		}
+	
+		return false;
+	}
+
+	public GugudanVO getQuiz() {
+		return quiz.get(cnt);
+	}
+	
+	public int getCnt() {
+		return cnt;
+	}
+
+	public int getScore() {
+		return score;
+	}
+	
 }
