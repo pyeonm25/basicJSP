@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <%-- common.jsp 에 있는 코드를 복붙한거랑 동일하다
 상위 jsp 파일내의 변수를 하위 jsp 에서도 사용가능 
 여기서는 dao 변수 사용가능

@@ -2,6 +2,6 @@
     pageEncoding="UTF-8"%>
 
 <%@ include file="./header.jsp" %>  
-
+<h1> 회원가입 </h1>
 
 <%@ include file="./footer.jsp" %>  
