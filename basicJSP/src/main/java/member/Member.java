@@ -12,6 +12,13 @@ public class Member {
 		this.name = name;
 		this.gender = gender;
 	}
+	public Member(String id, String pw, String name, String gender) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.name = name;
+		this.gender = gender.equals("남성")? true : false ;
+	}
 	@Override
 	public String toString() {
 		return "Member [id=" + id + ", pw=" + pw + ", name=" + name + ", gender=" + gender + "]";

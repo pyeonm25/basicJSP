@@ -37,7 +37,7 @@
 
 <% if(dao.getLog() == -1){ %>
 <a href="./joinForm.jsp">회원가입</a>
-<a href="./loginForm.jsp">회원가입</a>
+<a href="./loginForm.jsp">로그인</a>
 <%}else{ %>
 <a href="./updateForm.jsp">회원정보수정</a>
 <%} %>

@@ -10,7 +10,7 @@ public class MemberDAO {
 	public MemberDAO() {
 		list = new ArrayList<Member>();
 		addDummyUser();
-		log = 1;
+		//log = 1;
 	}
 	
 	public int getLog() {
@@ -38,6 +38,17 @@ public class MemberDAO {
 	
 	public Member getOneMember(int idx) {
 		return list.get(idx);
+	}
+	
+	public boolean isExistId(String id) {
+	
+		return list.stream().anyMatch(member -> member.getId().equals(id));
+	}
+	
+	
+	public void insertAMember(String id, String pw, String name , String gender) {
+		list.add( new Member(id, pw, name ,gender));
+		System.out.println("[회원가입 완료]");
 	}
 	
 	public String getListAsTableData() {
