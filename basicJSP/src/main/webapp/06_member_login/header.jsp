@@ -40,6 +40,8 @@
 <a href="./loginForm.jsp">로그인</a>
 <%}else{ %>
 <a href="./updateForm.jsp">회원정보수정</a>
+<a href="./logoutPro.jsp">로그아웃</a>
+<a href="./deleteForm.jsp">회원탈퇴</a>
 <%} %>
 <a href="./memberList.jsp">전체 회원목록</a>
 

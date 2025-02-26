@@ -16,6 +16,9 @@ public class MemberDAO {
 	public int getLog() {
 		return log;
 	}
+	public void setLog() {
+		log = -1;
+	}
 	
 	private void addDummyUser() {
 		Member m1 = new Member("admin","admin","관리자",true);
@@ -45,6 +48,21 @@ public class MemberDAO {
 		return list.stream().anyMatch(member -> member.getId().equals(id));
 	}
 	
+	public Member getLoginMember() {
+		return list.get(log);
+	}
+	
+	public boolean isMatchPW(String password) {
+		if(log == -1) return false;
+		Member m = list.get(log);
+		return m.getPw().equals(password);
+	}
+	
+	public void updateAMember(String name, String gender) {
+		Member m = list.get(log);
+		list.set(log, new Member(m.getId(),m.getPw(),name,gender));
+		
+	}
 	
 	public void insertAMember(String id, String pw, String name , String gender) {
 		list.add( new Member(id, pw, name ,gender));
@@ -65,6 +83,35 @@ public class MemberDAO {
 		}
 		
 		return data;
+	}
+	
+	public boolean isDeleteMember(int idx) {
+		if(idx < 1 || idx>=list.size()) return false;
+		list.remove(idx);
+		return true;
+	}
+	
+	public boolean isDeleteMember(String pw) {
+		if(getLoginMember().getPw().equals(pw)) {
+			list.remove(log);
+			log = -1;
+			return true;
+		}
+		
+		return false;
+	}
+	
+	public boolean isValidLogin(String id, String pw) {
+		int idx =0;
+		for(Member m : list) {
+			if(m.getId().equals(id)&& m.getPw().equals(pw)) {
+				log= idx;
+				return true;
+			}
+			idx+=1;
+		}
+		
+		return false;
 	}
 	
 }
